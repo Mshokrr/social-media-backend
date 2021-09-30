@@ -1,0 +1,24 @@
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    ["@babel/transform-runtime"],
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@admin": "./app/admin",
+          "@auth": "./app/auth",
+          "@config": "./config",
+          "@db": "./db",
+          "@lib": "./lib",
+          "@mailer": "./app/mailer",
+          "@media": "./app/media",
+          "@posts": "./app/posts",
+          "@profile": "./app/profile",
+          "@util": "./app/util"
+        }
+      }
+    ]
+  ]
+}

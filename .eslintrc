@@ -1,0 +1,38 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier", "import"],
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off"
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "alias": {
+          "@admin": "./app/admin",
+          "@auth": "./app/auth",
+          "@config": "./config",
+          "@db": "./db",
+          "@lib": "./lib",
+          "@mailer": "./app/mailer",
+          "@media": "./app/media",
+          "@posts": "./app/posts",
+          "@profile": "./app/profile",
+          "@util": "./app/util"
+        }
+      }
+    }
+  }
+}
