@@ -19,6 +19,12 @@ module.exports = {
         type: Sequelize.STRING,
         unique: true,
       },
+      firstName: {
+        type: Sequelize.STRING,
+      },
+      lastName: {
+        type: Sequelize.STRING,
+      },
       refreshToken: {
         type: Sequelize.STRING,
       },

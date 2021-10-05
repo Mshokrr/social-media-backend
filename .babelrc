@@ -16,6 +16,7 @@
           "@media": "./app/media",
           "@posts": "./app/posts",
           "@profile": "./app/profile",
+          "@search": "./app/search",
           "@util": "./app/util"
         }
       }

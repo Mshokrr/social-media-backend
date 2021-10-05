@@ -10,11 +10,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       User.hasMany(models.Post, {
         foreignKey: 'username',
+        as: 'User',
         allowNull: false,
         onDelete: 'CASCADE',
       });
       User.belongsToMany(models.Post, {
         through: models.PostLike,
+        as: 'PostLikes',
         foreignKey: 'username',
         onDelete: 'CASCADE',
       });
@@ -24,6 +26,8 @@ module.exports = (sequelize, DataTypes) => {
       return {
         username: this.username,
         email: this.email,
+        firstName: this.firstName,
+        lastName: this.lastName,
         refreshToken: this.refreshToken,
         status: this.status,
         isAdmin: this.isAdmin,
@@ -59,6 +63,8 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
+      firstName: DataTypes.STRING,
+      lastName: DataTypes.STRING,
       refreshToken: {
         type: DataTypes.STRING,
       },

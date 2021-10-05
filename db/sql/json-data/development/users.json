@@ -1,7 +1,26 @@
 [
   {
     "username": "mshokr",
+    "firstName": "Mohamed",
+    "lastName": "Shokr",
     "email": "mohamedshokrr@gmail.com",
+    "isAdmin": true,
+    "refreshToken": "",
+    "resetPasswordToken": ""
+  },
+  {
+    "username": "maged",
+    "firstName": "Maged",
+    "lastName": "Shalaby",
+    "email": "maged@gmail.com",
+    "refreshToken": "",
+    "resetPasswordToken": ""
+  },
+  {
+    "username": "mohab",
+    "firstName": "Mohab",
+    "lastName": "Amr",
+    "email": "mohab@gmail.com",
     "refreshToken": "",
     "resetPasswordToken": ""
   }

@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Post.belongsTo(models.User, {
         foreignKey: 'username',
+        as: 'User',
         allowNull: false,
         onDelete: 'CASCADE',
       });
@@ -20,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       });
       Post.belongsToMany(models.User, {
         through: models.PostLike,
+        as: 'PostLikes',
         foreignKey: 'postId',
         onDelete: 'CASCADE',
       });
